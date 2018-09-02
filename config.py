@@ -11,7 +11,7 @@ class Config:
     
 class ProdConfig(Config):
 	'''
-	Production configuration child class
+	Production configuration smsaller class
 	
 	Args:
 		Config : The parent configuration class with General configuration settings
@@ -21,7 +21,7 @@ class ProdConfig(Config):
 
 class DevConfig(Config):
 	'''
-	Development Configuration child class
+	Development Configuration smaller class
 
 	Args:
 		Config:The parent configuration class with General configuration settings
