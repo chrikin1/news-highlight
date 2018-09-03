@@ -33,3 +33,40 @@ def sports():
 	title = 'Home Page - Get The latest News Online Across The World'
 	return render_template('sports.html',sports=sports_news)
 
+@main.route('/science')
+def science():
+
+	science_news = get_news('science')
+	title = 'Home Page - Get The latest News Online Across The World'
+	return render_template('science.html',science=science_news)
+
+@main.route('/entertainment')
+def entertainment():
+
+	entertainment_news = get_news('entertainment')
+	title = 'Home Page - Get The latest News Online Across The World'
+	return render_template('entertainment.html',entertainment=entertainment_news)
+
+@main.route('/technology')
+def technology():
+
+	technology_news = get_news('technology')
+	title = 'Home Page - Get The latest News Online Across The World'
+	return render_template('technology.html',technology=technology_news)
+
+@main.route('/health')
+def health():
+
+	health_news = get_news('health')
+	title = 'Home Page - Get The latest News Online Across The World'
+	return render_template('health.html',health=health_news)
+@main.route('/templates/article/<id>')
+def article(id):
+    '''
+    returns articles 
+    '''
+    article_news = get_articles(id)
+    
+    title = f'{id}'
+
+    return render_template('article.html', title = title, article = article_news)
